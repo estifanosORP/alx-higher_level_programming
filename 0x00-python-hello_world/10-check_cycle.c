@@ -11,15 +11,8 @@ int check_cycle(listint_t *list)
 	listint_t *fast;
 	listint_t *slow;
 
-	fast = malloc(sizeof(listint_t *));
-	slow = malloc(sizeof(listint_t *));
-
 	if (list == NULL)
 	{
-		/*
-		* free(fast);
-		* free(slow);
-		*/
 		return (0);
 	}
 
@@ -27,21 +20,13 @@ int check_cycle(listint_t *list)
 	slow = list;
 
 	do {
-		slow = slow->next;
-		if (slow == NULL || fast == NULL)
+		if (slow == NULL || fast == NULL || fast->next == NULL)
 		{
-			/*
-			* free(fast);
-			* free(slow);
-			*/
 			return (0);
 		}
+		slow = slow->next;
 		fast = fast->next->next;
 	} while (fast != slow);
 
-	/*
-	* free(fast);
-	* free(slow);
-	*/
 	return (1);
 }
