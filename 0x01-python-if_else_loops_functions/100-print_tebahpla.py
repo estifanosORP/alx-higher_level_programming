@@ -5,4 +5,3 @@ for num in range(ord('z'), ord('a')-1, -1):
         print("{}".format(chr(num)), end='')
     else:
         print("{}".format(chr(num-32)), end='')
-
