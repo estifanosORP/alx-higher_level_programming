@@ -4,7 +4,7 @@ def safe_print_integer_err(value):
     """
     funtion that prints an integer
     """
-    
+
     import sys
 
     try:
