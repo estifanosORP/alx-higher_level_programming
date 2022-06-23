@@ -1,4 +1,4 @@
-#!/usr/bin/1-square.py
+#!/usr/bin/python3.py
 
 """
 module that defines different objects
