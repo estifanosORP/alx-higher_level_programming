@@ -9,6 +9,6 @@ class Square:
     """
     A class object for square
     """
-    
+
     def __init__(self, size):
         self.__size = size
