@@ -11,7 +11,7 @@ class Square:
     """
 
     def __init__(self, size=0):
-        if type(size) == int and size > 0:
+        if type(size) == int and size >= 0:
             self.__size = size
         else:
             if type(size) != int:
