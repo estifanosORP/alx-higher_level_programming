@@ -42,7 +42,7 @@ class Square:
     def __eq__(self, other):
         """equality comparison"""
         return self.area() == other.area()
-    
+
     def __ne__(self, other):
         """not equal"""
         return self.area() != other.area()
