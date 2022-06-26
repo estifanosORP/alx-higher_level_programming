@@ -47,7 +47,7 @@ class Square:
         setter for the private attribute position
         """
         if type(value) != tuple or len(value) != 2:
-             raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
 
