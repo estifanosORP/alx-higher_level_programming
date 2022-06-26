@@ -52,28 +52,17 @@ class SinglyLinkedList():
             new.next_node = None
             self.__head = new
 
-        elif self.__head.next_node is None:
-            if self.__head.data >= new.data:
-                new.__next_node = self.__head
-                self.__head = new
-            else:
-                self.__head.next_node = new
+        elif self.__head.data > new.data:
+            new.next_node = self.__head
+            self.__head = new
 
         else:
             tmp = self.__head
-            while (tmp.next_node is not None):
-                if (tmp == self.__head and tmp.data >= value):
-                    new.next_node = tmp
-                    tmp__head = new
-
-                if tmp.next_node.data >= value:
-                    nn = tmp.next_node
-                    tmp.next_node = new
-                    new.next_node = nn
-                    break
+            while (tmp.next_node is not None
+                   and tmp.next_node.data < new.data):
                 tmp = tmp.next_node
-            if tmp.next_node is None:
-                tmp.next_node = new
+            new.next_node = tmp.next_node
+            tmp.next_node = new
 
     def __str__(self):
         """makes the class printable"""
