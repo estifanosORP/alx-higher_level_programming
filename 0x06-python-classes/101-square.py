@@ -82,7 +82,7 @@ class Square:
 
     def __str__(self):
         """
-        method to define the string to print 
+        method to define the string to print
         when the function print() is called on the object
         """
         if (self.__size == 0):
