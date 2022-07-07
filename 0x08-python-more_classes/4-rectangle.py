@@ -20,7 +20,7 @@ class Rectangle:
 
     def __repr__(self):
         """
-        returns string representation of the rectangle to recreate a new 
+        returns string representation of the rectangle to recreate a new
         instance by using the eval() function.
         """
         return "Rectangle({0.width!r}, {0.height!r})".format(self)
