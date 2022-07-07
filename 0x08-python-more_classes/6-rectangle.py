@@ -2,9 +2,6 @@
 """Module for class that creates a rectangle object"""
 
 
-import numbers
-
-
 class Rectangle:
     """An empty rectangle class"""
 
