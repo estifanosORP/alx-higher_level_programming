@@ -19,7 +19,7 @@ def checker(board, row_idx, cols, pos):
     if (pos in cols):
         return False
     # Check if the pos lies at a diagonal to other queens
-    not_equal = [abs(ele[0]-row_idx) != abs(ele[1] - pos)  for ele in crds]
+    not_equal = [abs(ele[0]-row_idx) != abs(ele[1] - pos) for ele in crds]
     if not all(not_equal):
         return False
 
