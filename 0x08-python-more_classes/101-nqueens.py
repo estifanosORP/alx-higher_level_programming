@@ -81,7 +81,7 @@ def NQueen(N):
         start = board[0].index(1)+1
         all_solutions["sln" + str(start)] = board
 
-    # Extract the positions of the the queens 
+    # Extract the positions of the the queens
     for soln in all_solutions.values():
         index_solution = []
         for x in range(len(soln)):
