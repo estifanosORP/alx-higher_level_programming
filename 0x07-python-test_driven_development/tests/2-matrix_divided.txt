@@ -42,3 +42,19 @@ Test6: Case that works
 >>> matrix_divided([[1, 2, 4], [1, 4, 3]], 10)
 [[0.1, 0.2, 0.4], [0.1, 0.4, 0.3]]
 
+
+Test7: When the divisor is inf
+>>> matrix_divided([[1, 2, 3], [4, 5, 7]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test8: When the number of arguments is less than required
+>>> matrix_divided([10, 3])
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test9: When there are no input arguments
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
