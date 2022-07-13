@@ -1,0 +1,41 @@
+===================================
+Testing the module 0-add_integer.py
+===================================
+
+This text file defines the test cases for the integer addition function add_integer(a, b=98)
+
+Import the module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(1, -2)
+-1
+
+>>> add_integer(1.4, 2)
+3
+
+>>> add_integer(1, "2")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(10)
+108
+
+>>> add_integer("Hi", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("Hi", "World")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(1, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
