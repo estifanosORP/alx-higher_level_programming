@@ -1,0 +1,50 @@
+#########
+Doctest for the module 4-print_square
+#########
+
+#Import the module
+>>> print_square = __import__("4-print_square").print_square
+
+#Test1: Not int input
+>>> print_square("Hi")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+#Test2: Float input
+>>> print_square(10.4)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+#Test3: Negative Float input
+>>> print_square(-10.4)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+#Test4: Negative int input
+>>> print_square(-4)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+#Test5: No Input
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+#Test5: Input = 0
+>>> print_square(0)
+
+
+#Test5: No error
+>>> print_square(4)
+####
+####
+####
+####
