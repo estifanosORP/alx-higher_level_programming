@@ -7,7 +7,7 @@ module that prints a square
 
 def print_square(size):
     """
-    prints a square with the character #
+    prints a square with the character
     """
 
     if (not isinstance(size, int)) or (isinstance(size, float)):
