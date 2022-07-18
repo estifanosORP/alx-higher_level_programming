@@ -1,0 +1,105 @@
+#!/usr/bin/python3
+"""
+This is a unittest for the 100-matrix_mul.py module
+"""
+
+# Import the the module
+>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+# 1. Test if m_a is a list
+>>> matrix_mul(5, [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list
+
+# 2. Test if m_b is a list
+>>> matrix_mul([[1, 2], [3, 4]], 'hello')
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list
+
+# 3. Test if m_a is a list of lists
+>>> matrix_mul([1, 2], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+# 4. Test if m_b is a list of lists
+>>> matrix_mul([[1, 2], [3, 4]], [1, 2])
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
+
+# 5. Test if m_a is an empty list
+>>> matrix_mul([], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+>>> matrix_mul([[]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+# 6. Test if m_bis an empty list
+>>> matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+>>> matrix_mul([[1, 2], [3, 4]], [[]])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+# 7. Test if all elements of m_a are numbers
+>>> matrix_mul([[1, 'hi'], [3, 4]], [[1, 2, 3], [4, 1, 0]])
+Traceback (most recent call last):
+...
+TypeError: m_a should only contain integers or floats
+
+# 8. Test if all elements of m_a are numbers
+>>> matrix_mul([[1, 2, 3], [4, 1, 0]], [[1, 'hi', 9], [3, 4, 1]])
+Traceback (most recent call last):
+...
+TypeError: m_b should only contain integers or floats
+
+# 9. Test if m_a is rectangular
+>>> matrix_mul([[1, 2, 3], [4, 1]], [[1, 2, 9], [3, 4, 1]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must be of the same size
+
+# 10. Test if m_b is rectangular
+>>> matrix_mul([[1, 2, 3], [4, 1, 2]], [[1, 2, 9], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must be of the same size
+
+#11. Test if the matrices could be multiplied
+>>> matrix_mul([[1, 2, 3], [4, 1, 2]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
+#11. Only one input to the function
+>>> matrix_mul([[1, 2, 3], [4, 1, 2]])
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+#12. No input to the function
+>>> matrix_mul()
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+#13. Proper working case
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+>>> matrix_mul([[1, 2], [3, 4]], [[0], [0]])
+[[0], [0]]
