@@ -68,11 +68,11 @@ def matrix_mul(m_a, m_b):
     for lst in m_a:
         for ele in lst:
             if type(ele) not in [int, float]:
-                raise TypeError("m_a should only contain integers or floats")
+                raise TypeError("m_a should contain only integers or floats")
     for lst in m_b:
         for ele in lst:
             if type(ele) not in [int, float]:
-                raise TypeError("m_b should only contain integers or floats")
+                raise TypeError("m_b should contain only integers or floats")
 
     # Check whether each matrix is a rectangular one
     width = len(m_a[0])

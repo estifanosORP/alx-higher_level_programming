@@ -56,13 +56,13 @@ ValueError: m_b can't be empty
 >>> matrix_mul([[1, 'hi'], [3, 4]], [[1, 2, 3], [4, 1, 0]])
 Traceback (most recent call last):
 ...
-TypeError: m_a should only contain integers or floats
+TypeError: m_a should contain only integers or floats
 
 # 8. Test if all elements of m_a are numbers
 >>> matrix_mul([[1, 2, 3], [4, 1, 0]], [[1, 'hi', 9], [3, 4, 1]])
 Traceback (most recent call last):
 ...
-TypeError: m_b should only contain integers or floats
+TypeError: m_b should contain only integers or floats
 
 # 9. Test if m_a is rectangular
 >>> matrix_mul([[1, 2, 3], [4, 1]], [[1, 2, 9], [3, 4, 1]])
