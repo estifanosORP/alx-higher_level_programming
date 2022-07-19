@@ -96,4 +96,5 @@ TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 
 [[13, 16]]
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[0], [0]])
-[[0], [0]]
+[[0],
+ [0]]
