@@ -3,32 +3,42 @@
 # Import the module
 >>> MyList = __import__("1-my_list").MyList
 
-# 1. Print a correct list
+#1. Print a correct list
 >>> MyList.print_sorted([4, 1, 6])
 [1, 4, 6]
 
-# 2: Empty input
+#2: Empty input
 >>> MyList.print_sorted()
 Traceback (most recent call last):
 ...
 TypeError: print_sorted() missing 1 required positional argument: 'self'
 
-# 3. List with non-int input
+#3. List with non-int input
 >>> MyList.print_sorted([1, 'hello'])
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'str' and 'int'
 
-# 4. Input that is not list
+#4. Input that is not list
 >>> MyList.print_sorted(1)
 Traceback (most recent call last):
 ...
-TypeError: 'int' object is not subscriptable
+TypeError: 'int' object is not iterable
 
-# 5. Empty list input
+#5. Empty list input
 >>> MyList.print_sorted([])
 []
 
-# 6. When all elements of the list are strings 
+#6. When all elements of the list are strings 
 >>> MyList.print_sorted(['hi', 'john'])
 ['hi', 'john']
+
+#7. Check sequential creation of objects
+>>> ex = MyList()
+>>> ex.append(1)
+>>> ex.append(-10)
+>>> ex.append(3)
+>>> print(ex)
+[1, -10, 3]
+
+#8. 

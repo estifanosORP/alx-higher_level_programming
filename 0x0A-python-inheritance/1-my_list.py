@@ -15,6 +15,4 @@ class MyList(list):
         prints the list but in ascending order.
         The elements of the list are int
         """
-        lst_cpy = self[:]
-        lst_cpy.sort()
-        print(lst_cpy)
+        print(sorted(self))
