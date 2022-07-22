@@ -3,6 +3,7 @@
 module for checking the type of an object
 """
 
+
 def is_same_class(obj, a_class):
     """
     checks if an object is of a specific type
