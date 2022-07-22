@@ -1,6 +1,6 @@
 # Unit test for the 1-my_list module
 
-# Import the module
+#Import the module
 >>> MyList = __import__("1-my_list").MyList
 
 #1. Print a correct list
@@ -41,4 +41,5 @@ TypeError: 'int' object is not iterable
 >>> print(ex)
 [1, -10, 3]
 
-#8. 
+#8. ex.print_sorted()
+[-10, 1, 3]
