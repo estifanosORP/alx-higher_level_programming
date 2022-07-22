@@ -8,7 +8,7 @@ class MyList(list):
     """class inherits from the class object"""
     def __init__(self):
         """initializes the class"""
-        list.__init__(self)
+        super().__init__()
 
     def print_sorted(self):
         """
