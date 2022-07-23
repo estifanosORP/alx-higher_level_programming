@@ -1,0 +1,44 @@
+# Unittest for the 6-base_geometry.py module
+
+# Import the function
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+
+# 1. area() function
+>>> geo = BaseGeometry()
+>>> geo.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+
+# 2. integer_validation() - value is not an int
+>>> geo.integer_validator("name", 'hi')
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+
+# 3. integer_validator() - value is 0
+>>> geo.integer_validator("name", 0)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+
+# 4. integer_validator() - value is les than 0
+>>> geo.integer_validator("name", -15)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+
+# 5. integer_validator() - No input
+>>> geo.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# 5. integer_validator() - One input only
+>>> geo.integer_validator("name")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
