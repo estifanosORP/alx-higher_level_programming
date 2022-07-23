@@ -6,6 +6,7 @@ the int class
 
 
 class MyInt(int):
+    """class for a custom int object - MyInt"""
     def __int__(self):
         """initializes the object"""
         super().__init__()
