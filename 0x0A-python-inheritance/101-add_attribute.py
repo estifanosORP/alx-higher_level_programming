@@ -14,5 +14,5 @@ def add_attribute(obj, att_name, att_value):
     try:
         if att_name not in obj.__dict__.keys():
             setattr(obj, att_name, att_value)
-    except Exception:
+    except AttributeError:
         raise TypeError("can't add new attribute")
