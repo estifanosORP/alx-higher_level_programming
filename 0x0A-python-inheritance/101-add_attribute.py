@@ -11,8 +11,7 @@ def add_attribute(obj, att_name, att_value):
     args:
         obj: an instance of an object
     """
-    try:
-        if att_name not in obj.__dict__.keys():
-            setattr(obj, att_name, att_value)
-    except AttributeError:
+    if not hasattr(obj, att_name) and obj.__class__.__module__ != 'builtins':
+        setattr(obj, att_name, att_value)
+    else:
         raise TypeError("can't add new attribute")
