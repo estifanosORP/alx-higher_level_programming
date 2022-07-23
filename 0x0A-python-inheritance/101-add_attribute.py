@@ -11,7 +11,9 @@ def add_attribute(obj, att_name, att_value):
     args:
         obj: an instance of an object
     """
-    if att_name not in dir(obj) and obj.__class__.__module__ != 'builtins':
+    if (att_name not in dir(obj) and
+        obj.__class__.__module__ != 'builtins' and
+        '__slots__' not in dir(obj)):
         setattr(obj, att_name, att_value)
     else:
         raise TypeError("can't add new attribute")
